@@ -1,7 +1,5 @@
 from fastai.vision.all import *
 from fastapi import FastAPI, File, UploadFile
-from PIL import Image
-from io import BytesIO
 from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
