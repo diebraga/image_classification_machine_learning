@@ -64,5 +64,6 @@ or
 
 Your frontend will be running at http://127.0.0.1:5173
 
+![ezgif com-video-to-gif](https://user-images.githubusercontent.com/52054459/221587640-71d1a669-7c86-44f9-95c4-1924f61c87cc.gif)
 
-
+![ezgif com-video-to-gif (1)](https://user-images.githubusercontent.com/52054459/221587528-382d140e-bd8e-43fb-8d36-76e4109a1515.gif)
