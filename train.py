@@ -6,8 +6,7 @@ import certifi
 ssl._create_default_https_context = ssl._create_unverified_context
 ssl_context = ssl.create_default_context(cafile=certifi.where())
 
-searches = 'dog','park'
-path = Path('dog_or_park')
+path = Path('classification')
 
 dls = DataBlock(
     blocks=(ImageBlock, CategoryBlock), 
@@ -17,7 +16,7 @@ dls = DataBlock(
     item_tfms=[Resize(192, method='squish')]
 ).dataloaders(path, bs=32)
 
-learn = vision_learner(dls, resnet18, metrics=error_rate)
+learn = vision_learner(dls, resnet18, metrics=error_rate, pretrained=True)
 learn.fine_tune(3)
 
-learn.export('dog_or_park.pkl')
+learn.export('model.pkl')

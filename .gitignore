@@ -1,4 +1,4 @@
 myenv
 __pycache__
-dog_or_park
-dog_or_park.pkl
+classification
+model.pkl

@@ -1,9 +1,10 @@
 from fastai.vision.all import *
 from fastapi import FastAPI, File, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
+import gradio as gr
 
 app = FastAPI()
-learn = load_learner('dog_or_park.pkl')
+learn = load_learner('model.pkl')
 
 origins = ["*"]
 app.add_middleware(
@@ -16,16 +17,10 @@ app.add_middleware(
 
 @app.post('/predict')
 async def predict(file: UploadFile = File(...)):
-    is_dog,_,probs = learn.predict(await file.read())
-
-    if str(is_dog) == 'dog':
-        return {
-            'prediction': 'is dog',
-            'probability': str(probs[1])
-        }
-    else:
-        return {
-            'prediction': 'not a dog',
-            'probability': str(probs[1])
-        }
-
+    prediction, _, probabilities = learn.predict(await file.read())
+    probabilities = list(map(lambda p: int(round(float(p) * 100)), probabilities))
+    return {
+        'cat': f'{probabilities[0]}',
+        'dog': f'{probabilities[1]}',
+        'other': f'{probabilities[2]}',
+    }
