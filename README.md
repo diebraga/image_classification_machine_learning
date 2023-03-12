@@ -1,37 +1,33 @@
-# Is it a dog
-FastApi api that predicts if it's rather a dog or not using fastAI image classification.
-and a react frontend that consumes the endpoint.
+# Is it a cat or a dog
 
-## How to use
+FastApi api that predicts if it's a cat or a dog using fastAI image classification.
 
 ### Requirements
 
 - Python3
-- NodeJs
-- Npm or Yarn
 
 #### Backend
 
-- Create a virtual enviroment running in yuor terminal: 
+- Create a virtual enviroment running in yuor terminal:
 
 <code>python3 -m venv env</code>
 
-- Actinvate your virtual enviroment running: 
+- Actinvate your virtual enviroment running:
 
 On mac: <code>source env/bin/activate</code>
 
 On windows: <code>.\env\Scripts\activate</code>
 
-- Install dependecies: 
+- Install dependecies:
 
 <code>pip install -r requirements.txt</code>
 
 - Create image classification running in your terminal:
 
-<code>python3 download_img.py</code>
+<code>python3 download.py</code>
 
-It will create a folder classification with pictures of dogs and 
-non dogs in your root.
+It will create a folder classification with pictures of dogs and cats in your root.
+attention: `You should verify if each folder contains really cats and dogs also this pretrained model tends to be biased toward cats consired add more dogs data`
 
 - Train your model running in your terminal:
 
@@ -44,7 +40,6 @@ It will create a file called dog_or_park.pkl in your root.
 <code>uvicorn app:app --reload</code>
 
 Your server will be running at http://127.0.0.1:8000
-
 
 #### Frontend
 
