@@ -6,7 +6,7 @@ import gradio as gr
 app = FastAPI()
 learn = load_learner('model.pkl')
 
-origins = ["*"]
+origins = ["https://leafy-elf-2f1dcb.netlify.app"]
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
