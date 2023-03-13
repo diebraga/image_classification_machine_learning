@@ -19,5 +19,4 @@ dls = DataBlock(
 learn = vision_learner(dls, resnet18, metrics=error_rate, pretrained=True)
 learn.fine_tune(3)
 
-# uncomment to train model
-# learn.export('model.pkl')
+learn.export('model.pkl')
