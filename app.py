@@ -6,13 +6,18 @@ import gradio as gr
 app = FastAPI()
 learn = load_learner('model.pkl')
 
+origins = [
+    "https://leafy-elf-2f1dcb.netlify.app",
+]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
 
 @app.post('/predict')
 async def predict(file: UploadFile = File(...)):
