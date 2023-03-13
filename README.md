@@ -2,6 +2,12 @@
 
 FastApi api that predicts if it's a cat or a dog using fastAI image classification.
 
+![demo1](https://user-images.githubusercontent.com/52054459/224771687-2ed97135-8669-4775-a81b-e1097fd26500.gif)
+
+- Deployed site: <a href="https://leafy-elf-2f1dcb.netlify.app">CLICK HERE</a> as 
+  I'm using a free tie to deploy this site you may ecounter limitations or the app
+  could not be working follow the instructions bellow to run locally.
+
 ### Requirements
 
 - Python3
@@ -43,22 +49,6 @@ Your server will be running at http://127.0.0.1:8000
 
 #### Frontend
 
-- In you terminal:
+- Link to frontend repo: <a href="https://github.com/diebraga/is_dog_machine_learning_frontend">CLICK HERE</a>
 
-Open another terminal and go to the frontend folder
 
-<code>cd frontend</code>
-
-- Install dependencies:
-
-<code>npm install</code>
-
-or
-
-<code>yarn</code>
-
-Your frontend will be running at http://127.0.0.1:5173
-
-![ezgif com-video-to-gif](https://user-images.githubusercontent.com/52054459/221587640-71d1a669-7c86-44f9-95c4-1924f61c87cc.gif)
-
-![ezgif com-video-to-gif (1)](https://user-images.githubusercontent.com/52054459/221587528-382d140e-bd8e-43fb-8d36-76e4109a1515.gif)
