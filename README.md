@@ -1,4 +1,4 @@
-# Is it a cat or a dog
+# Image Classification
 
 FastApi api that predicts if it's a cat or a dog using fastAI image classification.
 
